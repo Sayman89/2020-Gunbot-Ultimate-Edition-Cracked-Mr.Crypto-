@@ -1,0 +1,423 @@
+{
+    "pairs": {
+        "bitmex_testnet": {
+            "ETH/USD": {
+                "trend": {
+                    "lastPrices": 3,
+                    "tickersQty": 50
+                },
+                "indicators": {
+                    "smaema_mm": {
+                        "full_name": "SMA/EMA signal",
+                        "notes": "Used to get LONG/SHORT signals for MM",
+                        "short_period": 5,
+                        "long_period": 20,
+                        "UTA_BUY": true,
+                        "UTA_SELL": true
+                    },
+                    "psar": {
+                        "full_name": "Parabolic SAR",
+                        "notes": "Trend finder: above prices is bearish, below prices is bullish",
+                        "acceleration_factor_step": 0.02,
+                        "acceleration_factor_maximum": 0.2,
+                        "UTA_BUY": true,
+                        "UTA_SELL": true
+                    }
+               }
+            }
+        }
+    },
+    "indicators": {
+        "bitmex_testnet": {
+            "ad": {
+                "full_name": "Accumulation/Distribution Line",
+                "notes": "raising value or falling value compared to price, confirms the trend"
+            },
+            "adosc": {
+                "full_name": "Accumulation/Distribution Oscillator",
+                "notes": "raising above 0 or falling below 0 confirms the trend",
+                "short_period": 3,
+                "long_period": 10
+            },
+            "adx": {
+                "full_name": "Average Directional Movement Index",
+                "notes": "0/25 weak- 25/50 strong - 50/75 very strong - 75/100 extremely very strong",
+                "period": 14
+            },
+            "adxr": {
+                "full_name": "Average Directional Movement Rating",
+                "notes": "A rising ADXR, with both the ADXR and DI+ above the DI- indicates a strengthening bullish market. A rising ADXR, with both the ADXR and DI- above DI+ indicates a strengthening bearish trend.",
+                "period": 14
+            },
+            "ao": {
+                "full_name": "Awesome Oscillator",
+                "notes": "buy/sell when zero crossing"
+            },
+            "apo": {
+                "full_name": "Absolute Price Oscillator",
+                "notes": "buy/sell when zero crossing",
+                "short_period": 10,
+                "long_period": 20
+            },
+            "aroon": {
+                "full_name": "Aroon",
+                "notes": "up minus down indicates trend strenght for values +-70.",
+                "period": 14
+            },
+            "aroonosc": {
+                "full_name": "Aroon Oscillator",
+                "notes": "Buy/sell if zero crossing",
+                "period": 14
+            },
+            "atr": {
+                "full_name": "Average True Range",
+                "notes": "Measures volatility, higher values more volatility",
+                "period": 14
+            },
+            "bbands": {
+                "full_name": "Bollinger Bands",
+                "period": 20,
+                "stddev": 2
+            },
+            "bop": {
+                "full_name": "Balance of Power",
+                "notes": "Measures the power of bulls against bears"
+            },
+            "cci": {
+                "full_name": "Commodity Channel Index",
+                "notes": "LONG > 100 and close when back down 100, SHORT < -100 and close when back up -100",
+                "period": 20
+            },
+            "cmo": {
+                "full_name": "Chande Momentum Oscillator",
+                "notes": "Momentum indicator, used on zero crossing",
+                "period": 9
+            },
+            "cvi": {
+                "full_name": "Chaikins Volatility",
+                "notes": "Values going above zero indicates the market is moving. The great thing about the Chaikin indicator is that it often peaks at around the same time every single day. This means that is the perfect tool for helping to time your trades.",
+                "period": 15
+            },
+            "dema": {
+                "full_name": "Double Exponential Moving Average",
+                "notes": "Offers less lag than EMA or MA",
+                "fast_period": 9,
+                "slow_period": 26
+            },
+            "di": {
+                "full_name": "Directional Indicator",
+                "notes": "di+ crossover di- for LONG, crossunder for SHORT",
+                "period": 15
+            },
+            "dm": {
+                "full_name": "Directional Movement",
+                "notes": "Similar to Directional Indicator but works with HH/LL",
+                "period": 15
+            },
+            "dpo": {
+                "full_name": "Detrended Price Oscillator",
+                "notes": "Overbought/Oversold indicator based on historical cyles of Max and min. Lagging.",
+                "period": 21
+            },
+            "dx": {
+                "full_name": "Directional Movement Index",
+                "notes": "zero crossing signals",
+                "period": 15
+            },
+            "ema": {
+                "full_name": "Exponential Moving Average",
+                "notes": "Exponential Moving Average. To use as crossing or SPREAD with others EMA or SMA",
+                "fast_period": 9,
+                "slow_period": 26
+            },
+            "emv": {
+                "full_name": "Ease of Movement",
+                "notes": "Trend indicator based on volume. Bullish when positive values, bearish when negative values"
+            },
+            "fisher": {
+                "full_name": "Fisher Transform",
+                "notes": "Trend reversal indicator. Signal crossing type",
+                "period": 15
+            },
+            "fosc": {
+                "full_name": "Forecast Oscillator",
+                "notes": "Trend indicator, compared with prices. If negative indicates a possible bull, if positive indicates a possible bear",
+                "period": 15
+            },
+            "hma": {
+                "full_name": "Hull Moving Average",
+                "notes": "Faster and less laggish MA",
+                "fast_period": 9,
+                "slow_period": 26
+            },
+            "kama": {
+                "full_name": "Kaufman Adaptive Moving Average",
+                "notes": "More reactive MA to noise and volatility",
+                "fast_period": 9,
+                "slow_period": 26
+            },
+            "kvo": {
+                "full_name": "Klinger Volume Oscillator",
+                "notes": "Zero crossing volume oscillator based on range+trend+volume.",
+                "short_period": 8,
+                "long_period": 16
+            },
+            "linreg": {
+                "full_name": "Linear Regression",
+                "notes": "A linear regression line used to forecast future prices",
+                "period": 15
+            },
+            "linregintercept": {
+                "full_name": "Linear Regression Intercept",
+                "notes": "To use with Forecast and Linear Regression",
+                "period": 15
+            },
+            "linregslope": {
+                "full_name": "Linear Regression Slope",
+                "notes": "zero crossing momentum based on linear regression",
+                "period": 15
+            },
+            "macd": {
+                "full_name": "Moving Average Convergence/Divergence",
+                "short_period": 12,
+                "long_period": 26,
+                "signal_period": 9
+            },
+            "marketfi": {
+                "full_name": "Market Facilitation Index",
+                "notes": "Trend confirmator only if compared with volume"
+            },
+            "mass": {
+                "full_name": "Mass Index",
+                "notes": "Trend reversal indicator: when it comes back below 27 after crossover",
+                "period": 10
+            },
+            "medprice": {
+                "full_name": "Median Price",
+                "notes": "Can be used as a filter for trend confirmations"
+            },
+            "mfi": {
+                "full_name": "Money Flow Index",
+                "notes": "overbought/oversold indicator for values above/below 70/30",
+                "period": 14
+            },
+            "mom": {
+                "full_name": "Momentum",
+                "notes": "zero crossing momentum signal",
+                "period": 10
+            },
+            "msw": {
+                "full_name": "Mesa Sine Wave",
+                "notes": "Sine/Lead crossing signals",
+                "period": 15
+            },
+            "natr": {
+                "full_name": "Normalized Average True Range",
+                "notes": "This is normalized ATR and measures % of volatility.",
+                "period": 14
+            },
+            "nvi": {
+                "full_name": "Negative Volume Index",
+                "notes": "Signals crossing with EMA 255. To use with PVI. NVI traces the pro, pro win the crowd money."
+            },
+            "obv": {
+                "full_name": "On Balance Volume",
+                "notes": "It moves faster than prices: the more it grows the more to expect bullish"
+            },
+            "ppo": {
+                "full_name": "Percentage Price Oscillator",
+                "notes": "Another zero crossing oscillator",
+                "short_period": 12,
+                "long_period": 26
+            },
+            "psar": {
+                "full_name": "Parabolic SAR",
+                "notes": "Trend finder: above prices is bearish, below prices is bullish",
+                "acceleration_factor_step": 0.02,
+                "acceleration_factor_maximum": 0.2
+            },
+            "pvi": {
+                "full_name": "Positive Volume Index",
+                "notes": "Signals crossing with EMA 255, to use with nvi. PVI traces the crowd: the crowd looses money"
+            },
+            "qstick": {
+                "full_name": "Qstick",
+                "notes": "Yet another zero crossing signals generator based on asian white/black Qsticks",
+                "period": 14
+            },
+            "roc": {
+                "full_name": "Rate of Change",
+                "notes": "Yet another zero crossing signals generator. This one is good for spoofing bubbles as it is laggish than other momentum indicators.",
+                "period": 9
+            },
+            "rocr": {
+                "full_name": "Rate of Change Ratio",
+                "notes": "Change between current price and price of n periods ago. Used to spot trends",
+                "period": 15
+            },
+            "rsi": {
+                "full_name": "Relative Strength Index",
+                "notes": "The most famous overbought/oversold indicator",
+                "period": 14
+            },
+            "sma": {
+                "full_name": "Simple Moving Average",
+                "notes": "Used for crossing with other SMAs or EMAs",
+                "short_period": 8,
+                "long_period": 16
+            },
+            "smaema": {
+                "full_name": "SMA/EMA crossing",
+                "notes": "Used for crossing with other SMAs or EMAs",
+                "short_period": 5,
+                "long_period": 20
+            },
+            "smaema_mm": {
+                "full_name": "SMA/EMA signal",
+                "notes": "Used to get LONG/SHORT signals for MM",
+                "short_period": 5,
+                "long_period": 20
+            },
+            "stoch": {
+                "full_name": "Stochastic Oscillator",
+                "notes": "Signal crossing generator",
+                "k_period": 14,
+                "k_slowing_period": 3,
+                "d_period": 3
+            },
+            "stochrsi": {
+                "full_name": "Stochastic RSI",
+                "notes": "Overbought/Oversold indicator",
+                "period": 14
+            },
+            "tema": {
+                "full_name": "Triple Exponential Moving Average",
+                "notes": "tema is actually a smartly smoothed MA that could confirm trend or signals on price crossing.",
+                "short_period": 8,
+                "long_period": 16
+            },
+            "tr": {
+                "full_name": "True Range",
+                "notes": "It is the distance between high and low. Maybe good to set a ping pong"
+            },
+            "trima": {
+                "full_name": "Triangular Moving Average",
+                "notes": "It is an average of average, basically double smoothed: makes it resistant to noise. Can be used on crossing with another trima on shorter periods, filtering volatility spikes.",
+                "short_period": 8,
+                "long_period": 16
+            },
+            "trix": {
+                "full_name": "Trix",
+                "notes": "A zero crossing oscillator that aims to filter all noises.",
+                "period": 15
+            },
+            "tsf": {
+                "full_name": "Time Series Forecast",
+                "notes": "it aims to predict price of next bar. Based on same time series i used in Gunbot.",
+                "period": 15
+            },
+            "typprice": {
+                "full_name": "Typical Price",
+                "notes": "sometimes used as prices line, it filters noises."
+            },
+            "ultosc": {
+                "full_name": "Ultimate Oscillator",
+                "notes": "One of the most famous modern overbough/oversold oscillators: it aims to anticipate entry points.",
+                "short_period": 5,
+                "medium_period": 14,
+                "long_period": 20
+            },
+            "vhf": {
+                "full_name": "Vertical Horizontal Filter",
+                "notes": "It is a trend builder indicator: it grows when uptrend is forming and vice versa",
+                "period": 15
+            },
+            "vidya": {
+                "full_name": "Variable Index Dynamic Average",
+                "notes": "This is a moving average that changes dynamically based on volatility.",
+                "short_period": 8,
+                "long_period": 16,
+                "short_period_cross": 50,
+                "long_period_cross": 200,
+                "alpha": 0.2
+            },
+            "volatility": {
+                "full_name": "Annualized Historical Volatility",
+                "notes": "a volatility meter",
+                "period": 10
+            },
+            "vosc": {
+                "full_name": "Volume Oscillator",
+                "notes": "It compares 2 MA based on volume: growing values would confirm uptrend of prices and viceversa",
+                "short_period": 8,
+                "long_period": 16
+            },
+            "vwma": {
+                "full_name": "Volume Weighted Moving Average",
+                "notes": "To use with a SMA crossing to spot breakouts",
+                "period": 14,
+                "sma_period": 7
+            },
+            "wad": {
+                "full_name": "Williams Accumulation/Distribution",
+                "notes": "It anticipates HH/LL of prices: if prices have an HH but wad doesnt, sell; if prices have a LL but wad doesnt, buy"
+            },
+            "wcprice": {
+                "full_name": "Weighted Close Price",
+                "notes": "Can be used instead of Typical Price: it is weighed and includes high,low and close in a single point per bar"
+            },
+            "wilders": {
+                "full_name": "Wilders Smoothing",
+                "notes": "It is a more heavily smoothed MA",
+                "short_period": 8,
+                "long_period": 16
+            },
+            "willr": {
+                "full_name": "Williams %R",
+                "notes": "A simpler but effective overbought/oversold: overbought above -20, oversold below -80",
+                "period": 14
+            },
+            "wma": {
+                "full_name": "Weighted Moving Average",
+                "notes": "The classic weighted MA: it aims to filter noises and spikes",
+                "short_period": 8,
+                "long_period": 16
+            },
+            "zlema": {
+                "full_name": "Zero-Lag Exponential Moving Average",
+                "notes": "It aims to zero lag for MA",
+                "short_period": 8,
+                "long_period": 16
+            }
+        }
+    },
+    "exchanges": {
+        "binance": {
+            "key": "api",
+            "secret": "secret",
+            "masterkey": "api",
+            "mastersecret": "secret",
+            "key2": "api",
+            "secret2": "secret",
+            "passphrase": "123456",
+            "delay": 20,
+            "REST_delay": 30,
+            "TRADING_FEES": 0.25,
+            "TRADES_INTERVAL": 15,
+            "filteredPairs": [
+                "Hydro"
+            ],
+            "filteredBags": [],
+            "includeCoins": [],
+            "Volume1st": {},
+            "Volume2nd": {},
+            "Volume3rd": {}
+        }
+    },
+    "telegram": {
+        "TELEGRAM_ENABLED": true,
+        "TELEGRAM_NICK": "UTA",
+        "TOKEN": "yourtoken",
+        "chat_id": 1234560000
+    }
+}

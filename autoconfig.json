@@ -1,0 +1,43 @@
+{
+	"add_top_volume_btc_pairs": {
+		"pairs": {
+			"exclude": "",
+			"include": "BTC-",
+			"maxPairs": 10,
+			"exchange": "binance"
+		},
+		"filters": {
+			"volume": {
+				"type": "maxVolumeRank",
+				"max": 10
+			}
+		},
+		"schedule": "*/15 * * * *",
+		"type": "addPairs",
+		"strategy": "yourStrategyName",
+		"enabled": false,
+		"resume": true,
+		"debug": false,
+		"snapshots": 1
+	},
+	"remove_btc_pairs_when_volume_drops": {
+		"pairs": {
+			"exclude": "",
+			"noBag": true,
+			"removeDisabled": false,
+			"exchange": "binance"
+		},
+		"filters": {
+			"volume": {
+				"type": "minVolumeRank",
+				"min": 11
+			}
+		},
+		"schedule": "*/10 * * * *",
+		"type": "removePairs",
+		"enabled": false,
+		"resume": true,
+		"debug": false,
+		"snapshots": 1
+	}
+}
